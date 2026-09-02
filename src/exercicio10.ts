@@ -1,28 +1,33 @@
+export class Pessoa {
+private nome: string = "";
+private idade: number = 0;
+private endereco: string = "";
+private profissao: string = "";
 
-import { createInterface } from "node:readline/promises";
-
-function verificarMaioridade(idade: number): string {
-if (idade >= 18) {
-return "Maior de idade";
+setNome(nome: string): void {
+this.nome = nome;
 }
-return "Menor de idade";
+getNome(): string {
+return this. nome;
 }
-async function main(): Promise<void> {
-const leitor = createInterface({
-input: process.stdin,
-output: process. stdout
-});
-const nome: string = await leitor.question(
-"Digite seu nome: "
-);
-
-const idade: number = Number(
-await leitor.question("Digite sua idade: ")
-);
-const resultado: string = verificarMaioridade(idade);
-
-console. log('${nome}: ${resultado}');
-
-leitor.close();
+setIdade(idade: number): void {
+this.idade = idade;
 }
-main();
+getIdade(): number {
+return this. idade;
+}
+setEndereco(endereco: string): void {
+this.endereco = endereco;
+}
+getEndereco(): string {
+return this. endereco;
+}
+setProfissao(profissao: string): void {
+this.profissao = profissao;
+}
+getProfissao(): string {
+return this.profissao;
+
+
+}
+}

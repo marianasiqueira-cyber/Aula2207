@@ -1,21 +1,12 @@
-import { createInterface } from "node:readline/promises";
+function exibirSoma(
+    numero1: number,
+    numero2: number
+): void{
+    const resultado = numero1 + numero2;
 
-async function main(): Promise<void> {
-const leitor = createInterface({
-
-input: process.stdin,
-output: process.stdout
-})
-const numero: number = Number(
-await leitor.question("Digite um numero: ")
-
-);
-
-for (let contador: number = 1; contador <= numero; contador++) {
-console. log('Contador: ${contador}');
-}
-leitor.close();
-
+    console.log (`Resultado: ${resultado}`);
 }
 
-main();
+exibirSoma (10,5);
+exibirSoma (3,4);
+exibirSoma( 210,3);

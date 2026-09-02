@@ -1,21 +1,9 @@
-import { createInterface } from "node:readline/promises";
+function verificarIdade(idade: number): string {
+    if (idade >=18) {
+        return "Maior de idade";
+    }
 
-async function main(): Promise<void> {
-const leitor = createInterface({
-input: process.stdin,
-output: process.stdout
-})
-const limite: number = Number(
-await leitor.question("Digite o limite da contagem: ")
-);
-
-let contador: number = 1;
-
-while (contador <= limite) {
-console. log ("Contador: ${contador}");
-contador++;
+    return "Menor de idade";
 }
-
-leitor.close();
-}
-main();
+const resultado = verificarIdade(20);
+console.log (resultado);

@@ -1,5 +1,8 @@
-const nome:string = "André";
-const idade: number = 40; 
+const numero1 = 5; 
+console.log(numero1 * 2);
 
-console.log("nome ", nome);
-console.log("Idade:", idade );
+const numero2 = 8;
+console.log(numero2 * 2 );
+
+const numero3 = 10;
+console.log(numero3 * 2);
